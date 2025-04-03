@@ -1,0 +1,46 @@
+@api = http://localhost:4004/api/inv
+
+### 🔵 GET ALL (Todos los registros)
+GET {{api}}/getall
+
+### 🔵 GET by Query Param (?id=3)
+GET {{api}}/getitem(ID=4)
+
+### POST un nuevo registro de pricehistory
+POST {{api}}/addOne
+Content-Type: application/json
+
+{
+  "prices": {
+    "ID": 11,
+    "DATE": "2024-02-02T00:00:00Z",
+    "OPEN": 1.50,
+    "HIGH": 1.70,
+    "LOW": 1.45,
+    "CLOSE": 1.60,
+    "VOLUME": 3500000
+  }
+}
+### POST ELIMINA UN SERVICIO
+POST {{api}}/deleteItem
+Content-Type: application/json
+
+{
+  "ID": 11
+}
+
+### PUT actualiza un registro existente
+POST {{api}}/updateItem
+Content-Type: application/json
+
+{
+  "prices": {
+    "ID": 11,
+    "DATE": "2024-02-02T00:00:00Z",
+    "OPEN": 1.80,
+    "HIGH": 2.00,
+    "LOW": 1.50,
+    "CLOSE": 1.80,
+    "VOLUME": 40000
+  }
+}
